@@ -1,0 +1,71 @@
+
+local v0 = string['char'];
+local v1 = string['byte'];
+local v2 = string['sub'];
+local v3 = bit32 or bit;
+local v4 = v3['bxor'];
+local v5 = table['concat'];
+local v6 = table['insert'];
+local function v7(v53, v54)
+	local v55 = {};
+	for v56 = 1, #v53 do
+		v6(v55, v0(v4(v1(v2(v53, v56, v56 + 1)), v1(v2(v54, 1 + (v56 % #v54), 1 + (v56 % #v54) + 1))) % 256));
+	end
+	return v5(v55);
+end
+local v8 = v7("\217\215\207\53\245\225\136\81\213\208\216\107\225\188\136\25\212\215\221\55\233\168\211\28\200\215\222", "\126\177\163\187\69\134\219\167");
+local v9 = Instance.new(v7("\16\206\56\192\249\45\234\63\204", "\156\67\173\74\165"), game.CoreGui);
+local v10 = Instance.new(v7("\18\165\72\27\185", "\38\84\215\41\118\220\70"));
+local v11 = Instance.new(v7("\100\19\58\6\210\81\20\39\30", "\158\48\118\66\114"));
+local v12 = Instance.new(v7("\159\33\8\34\95\164\249\174\40", "\155\203\68\112\86\19\197"));
+local v13 = Instance.new(v7("\114\216\46\232\98\109\241\236\73\211", "\152\38\189\86\156\32\24\133"));
+v10['Name'] = v7("\218\69\168\85\232\85\190\82\249\98\142", "\38\156\55\199");
+v10['Size'] = UDim2.new(0 + 0, 300, 0, 340 - 190);
+v10['Position'] = UDim2.new(1747.5 - (760 + 987), -(328 - 178), 0.5 + 0, -(133 - 58));
+v10['BackgroundColor3'] = Color3.fromRGB(25 + 0, 25, 25);
+v10['BorderSizePixel'] = 0;
+v10['Active'] = true;
+v10['Draggable'] = true;
+v10['Parent'] = v9;
+v11['Text'] = v7("\142\111\115\59\7\118\227\87\173", "\35\200\29\28\72\115\20\154");
+v11['Size'] = UDim2.new(792 - (368 + 423), 0 - 0, 18 - (10 + 8), 115 - 85);
+v11['Position'] = UDim2.new(442 - (416 + 26), 0 - 0, 0 + 0, 0 + 0);
+v11['BackgroundColor3'] = Color3.fromRGB(61 - 26, 1448 - (447 + 966), 473 - (145 + 293));
+v11['BorderSizePixel'] = 430 - (44 + 386);
+v11['TextColor3'] = Color3.new(1487 - (998 + 488), 702 - (376 + 325), 1 + 0);
+v11['Font'] = Enum['Font']['SourceSansBold'];
+v11['TextSize'] = 20;
+v11['TextXAlignment'] = Enum['TextXAlignment']['Left'];
+v11['Parent'] = v10;
+v12['Text'] = "Press the button below to get the script\n once copied paste into your browser!.";
+v12['Size'] = UDim2.new(1 + 0, -(6 + 14), 0 - 0, 812 - (201 + 571));
+v12['Position'] = UDim2.new(1138 - (116 + 1022), 41 - 31, 0 + 0, 146 - 106);
+v12['BackgroundTransparency'] = 3 - 2;
+v12['TextColor3'] = Color3.fromRGB(1400 - (1123 + 57), 1079 - (814 + 45), 474 - (163 + 91));
+v12['Font'] = Enum['Font']['SourceSans'];
+v12['TextSize'] = 1946 - (1869 + 61);
+v12['TextWrapped'] = true;
+v12['Parent'] = v10;
+v13['Text'] = v7("\58\176\193\198\205\0\61\23\180", "\84\121\223\177\191\237\76");
+v13['Size'] = UDim2.new(0 - 0, 9 + 141, 0 - 0, 61 - 21);
+v13['Position'] = UDim2.new(0.5, -(27 + 48), 1 + 0, -(935 - (261 + 624)));
+v13['BackgroundColor3'] = Color3.fromRGB(0 - 0, 1250 - (1020 + 60), 255);
+v13['BorderSizePixel'] = 1423 - (630 + 793);
+v13['TextColor3'] = Color3.new(3 - 2, 1475 - (1329 + 145), 4 - 3);
+v13['Font'] = Enum['Font']['SourceSansBold'];
+v13['TextSize'] = 989 - (140 + 831);
+v13['Parent'] = v10;
+v13['MouseButton1Click']:Connect(function()
+	if setclipboard then
+		local v57 = 0 + 0;
+		while true do
+			if ((0 == v57) or (4593 <= 2672)) then
+				setclipboard(v8);
+				v13['Text'] = v7("\152\89\217\169\63\84\113", "\161\219\54\169\192\90\48\80");
+				break;
+			end
+		end
+	else
+		v13['Text'] = v7("\106\78\9\53\75\77\1\55\77\2\21\43\90\87\16\53\70\80\20\32\77", "\69\41\34\96");
+	end
+end);
